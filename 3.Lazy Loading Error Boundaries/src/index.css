@@ -1,0 +1,204 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 2em;
+  width: 100%;
+}
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+  max-width: 400px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.form input {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  font-size: 1em;
+}
+.form input:focus {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.form button {
+  align-self: flex-start;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.task-list .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+}
+.task-list .task .actions {
+  display: flex;
+  gap: 0.5em;
+}
+.task-list .task .actions button {
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+}
+.task-list .task .actions button:hover {
+  border-color: #646cff;
+}
+.task-list .task .actions button:focus,
+.task-list .task .actions button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+.delete-button:focus,
+.delete-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.edit-button {
+  background-color: #4d79ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.edit-button:hover {
+  background-color: #1a1aff;
+}
+.edit-button:focus,
+.edit-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+.filter-buttons button {
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+.filter-buttons button:hover {
+  background-color: #e0e0e0;
+}
+.filter-buttons button:focus,
+.filter-buttons button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.filter-buttons.hidden {
+  display: none;
+}
+
+/* ── Suspense fallback loader ──────────────────────────────────────────── */
+.suspense-loader {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  padding: 1.5em;
+  color: #888;
+  font-size: 0.95em;
+}
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ccc;
+  border-top-color: #646cff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── ErrorBoundary fallback card ───────────────────────────────────────── */
+.error-boundary-fallback {
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 8px;
+  padding: 2em;
+  margin-top: 1em;
+  text-align: center;
+  color: #c53030;
+}
+.error-boundary-fallback .error-icon {
+  font-size: 2.5em;
+  display: block;
+  margin-bottom: 0.25em;
+}
+.error-boundary-fallback h2 {
+  margin: 0 0 0.5em;
+  font-size: 1.2em;
+}
+.error-boundary-fallback .error-message {
+  font-size: 0.9em;
+  color: #742a2a;
+  background: #fff;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: 1px solid #fed7d7;
+  margin-bottom: 1em;
+  word-break: break-word;
+}
+.retry-button {
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1.25em;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+.retry-button:hover {
+  background-color: #535bf2;
+}
+
+/* ── Crash simulation button ────────────────────────────────────────────── */
+.crash-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-bottom: 0.75em;
+}
+.crash-button:hover {
+  background-color: #e53e3e;
+}
